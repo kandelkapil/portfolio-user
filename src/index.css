@@ -1,0 +1,635 @@
+* {
+  font-family: Poppins, sans-serif;
+  cursor: url(Fixit/Ellipse\ 324.png), auto;  
+}
+
+
+.a11p{
+  font-size: 18px;
+}
+
+.navbar-hidden {
+  display: none;
+}
+
+
+.love {
+  font-size: 0.54em;
+  font-family: Poppins;
+  justify-content: center;
+  color: red;
+}
+
+.emojiport{
+  transition: all 0.3s;
+}
+
+body[data-aos-duration='4000'] [data-aos],
+[data-aos][data-aos][data-aos-duration='4000'] {
+  transition-duration: 4000ms;
+}
+[data-aos] {
+  body[data-aos-easing="new-easing"] &,
+  &[data-aos][data-aos-easing="new-easing"] {
+    transition-timing-function: cubic-bezier(0.68, -0.95, 0.265, 1.55);
+  }
+}
+
+
+
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#wave-hand {
+  display: inline-block;
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX("-10deg");
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX("0");
+  }
+}
+
+#wave-bajrang {
+  display: inline-block;
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX("-10deg");
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX("0");
+  }
+}
+
+#btntotop {
+  display: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 4cap;
+  height: 40px;
+  background: #6c63ff;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  border-color: #6c63ff;
+}
+
+#btntotop:active {
+  background: #6c63ff;
+}
+
+#btntotop img {
+  width: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-right: 0px;
+  transition: 0.5s;
+}
+
+#btntotop img:hover {
+  z-index: 2;
+}
+
+.a4p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8f8a8a;
+  margin-left: 60px;
+}
+
+.a3p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.8rem;
+  font-family: poppins, sans-serif;
+}
+
+.a1p {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 5px;
+}
+
+
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #161515;
+}
+
+.Subtitle p {
+  padding-top: 20px;
+  font-size: 1.3em;
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-family: poppins, sans-serif;
+}
+
+.top h1 {
+  font-size: 36px;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.top h1 span {
+  color: #6c63ff;
+}
+
+.nickname p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #8f8a8a;
+  padding-top: 10px;
+}
+*/---------CLOCK START ------------*/
+ .clock {
+  color: #8f8a8a;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+
+.clockanalog {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #feb3bf;
+  position: relative;
+  margin-left: 42%;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.clockanalog:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+
+.nav-item {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-item:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.clockanalog .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 8px;
+}
+
+.clockanalog .number1 {
+  --rotation: 30deg;
+}
+.clockanalog .number2 {
+  --rotation: 60deg;
+}
+.clockanalog .number3 {
+  --rotation: 90deg;
+}
+.clockanalog .number4 {
+  --rotation: 120deg;
+}
+.clockanalog .number5 {
+  --rotation: 150deg;
+}
+.clockanalog .number6 {
+  --rotation: 180deg;
+}
+.clockanalog .number7 {
+  --rotation: 210deg;
+}
+.clockanalog .number8 {
+  --rotation: 240deg;
+}
+.clockanalog .number9 {
+  --rotation: 270deg;
+}
+.clockanalog .number10 {
+  --rotation: 300deg;
+}
+.clockanalog .number11 {
+  --rotation: 330deg;
+}
+
+.clockanalog .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+
+  background-color: black;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  z-index: 10;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  
+}
+
+.clockanalog::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  z-index: 10;
+  width: 5px;
+  height: 5px;
+  top: 45%;
+  left: 46%;
+  transform: translateX(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clockanalog .hand.second {
+  width: 1px;
+  height: 34%;
+  background-color: #6c63ff;
+
+
+}
+
+.clockanalog .hand.minute {
+  width: 1.1px;
+  height: 32%;
+  background-color: black;
+}
+
+.clockanalog .hand.hour {
+  width: 3px;
+  height: 24%;
+  background-color: black;
+}
+
+*/---------CLOCK END ------------*/ .container h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 30px;
+  color: #5c5a5a;
+}
+
+.col.box thumb {
+  width: 525px;
+}
+
+.title-1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #161515;
+  margin-top: 12px;
+  padding-left: 0px;
+}
+
+.description-1 {
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 0px;
+  color: #7c7878;
+}
+
+.title-2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #161515;
+  margin-top: 12px;
+  padding-left: 5px;
+}
+
+.description-2 {
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 5px;
+  color: #7c7878;
+}
+
+.project-link-1 {
+  text-decoration: none;
+}
+
+.project-link-2 {
+  text-decoration: none;
+  transition: 1s;
+}
+
+.title-3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #161515;
+  margin-top: 12px;
+  padding-left: 0px;
+}
+
+.description-3 {
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 0px;
+  color: #7c7878;
+}
+
+.title-4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #161515;
+  margin-top: 12px;
+  padding-left: 5px;
+}
+
+.description-4 {
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 5px;
+  color: #7c7878;
+}
+
+.project-link-3 {
+  text-decoration: none;
+}
+
+.project-link-4 {
+  text-decoration: none;
+}
+
+.footer-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5c5a5a;
+}
+
+.footer-title span {
+  font-weight: 600;
+  color: #6c63ff;
+}
+
+.icon-linkedin {
+  width: 18px;
+  margin-right: 10px;
+  margin-top: -20px;
+  text-decoration: none;
+}
+
+.icon-mail {
+  width: 18px;
+  margin-left: 10px;
+  margin-top: 0px;
+  text-decoration: none;
+}
+
+/*-------------------------------------------ABOUT ME PAGE CSS----------------------------------------------------------------*/
+
+.title-aboutme {
+  font-size: 28px;
+  font-weight: 600;
+  color: #5c5a5a;
+}
+
+.description-aboutme {
+  color: #5c5a5a;
+  line-height: 30px;
+}
+
+.description-aboutme-2 {
+  color: #5c5a5a;
+  line-height: 30px;
+}
+
+.description-aboutme-3 {
+  color: #5c5a5a;
+  line-height: 30px;
+}
+
+.description-aboutme-3 span {
+  color: #5c5a5a;
+  font-weight: 600;
+}
+
+.gallery {
+  font-weight: 600;
+  text-align: center;
+  color: #5c5a5a;
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 992px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .clockanalog{
+      margin-left: 46%;
+    }
+
+}
+/*------------------------------------------------------RESUME PAGE CSS------------------------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+  .btntotop {
+    display: none;
+  }
+  .top h1 {
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .Subtitle p {
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .nickname p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8f8a8a;
+    padding-top: 10px;
+  }
+  .clock {
+    margin: 5px;
+  }
+
+  .container h4 {
+    font-size: 18px;
+    padding-top: 5px;
+  }
+
+  .container.col {
+    display: flex;
+    padding: 10px;
+  }
+
+  .title-1 {
+    font-size: 16px;
+  }
+
+  .description-1 {
+    font-size: 14px;
+  }
+
+  .title-2 {
+    font-size: 16px;
+  }
+
+  .description-2 {
+    font-size: 14px;
+  }
+
+  .title-3 {
+    font-size: 16px;
+  }
+
+  .description-3 {
+    font-size: 14px;
+  }
+
+  .title-4 {
+    font-size: 16px;
+  }
+
+  .description-4 {
+    font-size: 14px;
+  }
+
+  .footer-title {
+    font-size: 12px;
+    font-weight: 400;
+    color: #5c5a5a;
+  }
+
+  .footer-title span {
+    font-weight: 600;
+    color: #6c63ff;
+  }
+
+  .icon {
+    width: 14px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+
+  .icon-mail {
+    width: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+
+  /*-------------ABOUT ME PAGE MOBILE SCREEN-----------*/
+
+  .title-aboutme {
+    font-size: 20px;
+    font-weight: 600;
+    color: #161515;
+  }
+
+  .description-aboutme {
+    font-size: 14px;
+    color: #5c5a5a;
+    line-height: 30px;
+  }
+
+  .description-aboutme-2 {
+    font-size: 14px;
+    color: #5c5a5a;
+    line-height: 30px;
+  }
+
+  .description-aboutme-3 {
+    font-size: 14px;
+    color: #5c5a5a;
+    line-height: 30px;
+  }
+
+  .subtitle-fixit {
+    font-size: var(--fs-400);
+  }
+}
+
+/*-----------------------------------------FIXIT CASE STUDY CSS HERE----------------------------------------------------*/
+
+.nickname-fixit {
+  font-weight: 600;
+  color: #8f8a8a;
+}
+
+.subtitle-fixit {
+  font-size: var(--fs-600);
+  font-weight: 600;
+  color: #161515;
+}
+
+.img-scnd {
+  transition: all 0.3s cubic-bezier(0.68, -0.95, 0.265, 1.55);
+}
+.img-scnd:hover {
+  transform: scale(1.04);
+  z-index: 2;
+}
+
+.img4{
+  transition: all 0.3s cubic-bezier(0.68, -0.95, 0.265, 1.55);
+}
+.img4:hover{
+  transform: scale(1.04);
+  z-index: 2;
+}
+
+.img-thrd {
+  transition: all 0.3s cubic-bezier(0.68, -0.95, 0.265, 1.55);
+}
+.img-thrd:hover {
+  transform: scale(1.04);
+  z-index: 2;
+}
+.img1 {
+  transition: all 0.3s cubic-bezier(0.68, -0.95, 0.265, 1.55) !important;
+}
+
+.img1:hover {
+  transform: scale(1.04);
+  z-index: 2;
+}
+
+.navbar{
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(15px) !important;
+}
