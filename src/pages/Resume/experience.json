@@ -1,0 +1,69 @@
+{
+    "experience": [
+      {
+        "company": "Wesionary Team",
+        "duration": "Jan 31, 2022 – Till date",
+        "position": "DevOps Engineer, Team Lead",
+        "location": "Chitwan, Nepal",
+        "responsibilities": [
+          "Creating plan and road map for transitioning the Organization to DevSecOps Principle.",
+          "Provide operational support to Cloud and other issues in projects.",
+          "Hands-on experience with AWS, GCP, and CICD tools to automate the process in Cloud and Operation Side.",
+          "Troubleshoot issues in different technology and provide a reliable solution and document the procedure.",
+          "Involve in planning, requirement elicitation, understanding client processes, accessing the project scope to perform gap analysis, and provision workforce as needed.",
+          "Work closely with clients, and developers to support IT operations in different projects and monitor solutions to ensure they work as expected.",
+          "Interacted with the team regularly to analyze and understand the project updates.",
+          "Developed and maintained procedure documentation for references."
+        ],
+        "environment": [
+          "Linux (Centos, Ubuntu Server)",
+          "Google Cloud Platform",
+          "Typer",
+          "Amazon Web Services",
+          "Terraform"
+        ]
+      },
+      {
+        "company": "Leapfrog Technology",
+        "duration": "Oct 25, 2021 – Dec 15, 2021",
+        "position": "Intern (DevOps Internship)",
+        "location": "Chitwan, Nepal",
+        "responsibilities": [
+          "Experienced working in Disk, Log, and Resource Management with SSH, SFTP, Routing, and Firewall (Writing rules and updating rules as per the requirements).",
+          "Gained knowledge of DNS, NAT, and VPN, and have also configured OpenVPN server.",
+          "Assisted in the deployment of Web and App Server as App Servers (Node/React), Database Server (Postgresql), Django (WSGI/gunicorn), and Java Applications using Glassfish Server.",
+          "Learned different AWS (Amazon Web Services) such as launching EC2 Instance, Lambda, S3, Route53, Load Balancer, VPC, IAM, and Internet Gateway."
+        ],
+        "environment": [
+          "Linux (Centos, Ubuntu Server)",
+          "Web Servers (Nginx)",
+          "Docker",
+          "Amazon Web Services (EC2, IAM, S3, Lambda)",
+          "App Deployment (Java, Django, React)",
+          "CICD Pipeline",
+          "Bash Scripting",
+          "Logging",
+          "Monitoring"
+        ]
+      },
+      {
+        "company": "NAXA",
+        "duration": "May 10, 2021 – Oct 12, 2021",
+        "position": "Backend Developer",
+        "location": "Chitwan, Nepal",
+        "responsibilities": [
+          "Participated in geospatial data projects, and understand the concept of optimizing code writing.",
+          "Highly motivated to write an optimal API so that its performance will not deteriorate as the data in the system increases.",
+          "Experienced with spatial information and PostGIS databases in Geodjango, wrote query collections, collect data from various fields of foreign keys, etc.",
+          "Send Push notifications from Django using pyfcm package."
+        ],
+        "environment": [
+          "Python",
+          "Django",
+          "Django Rest Framework",
+          "Linux"
+        ]
+      }
+    ]
+  }
+  
