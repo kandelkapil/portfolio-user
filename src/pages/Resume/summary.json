@@ -1,0 +1,21 @@
+[
+    "Experience in the field of DevOps engineering with extensive knowledge in application configurations, code compilation, implementing, and managing cutting-edge deployment automation of cloud resources.",
+    "Experienced in branching, merging, and maintaining the versions using tools like Git and GitHub on Windows and Linux platforms.",
+    "Hands-on experience with AWS, GCP, and CICD tools to automate the process in Cloud and Operation Side.",
+    "Documented the system processes, procedures, and data flow from multi-sources.",
+    "Expertise in managing the git repository hosted in Github.",
+    "Experienced using GIT via a terminal and performing different tasks.",
+    "Creating Branch, Stash Concept and how it works, solving merge conflicts that arise in the repository.",
+    "Create and run docker images using the command line or using a docker file using docker commands. Write the docker-compose file to execute multiple containers at once and run them.",
+    "Experience containerizing Django Applications.",
+    "Ability to containerize different applications in Docker and execute, and troubleshoot problems related to Dockerfile and docker-compose files.",
+    "Create workflows and manage the deployment from the development server to production servers using the CICD. Automating the deployment using the action workflow.",
+    "Configuring and building different projects in GitHub Runner and running the unit test in the CICD pipeline.",
+    "Deploying different applications in GCP and AWS, Creating a reusable workflow for different environments.",
+    "Knowledge of creating infrastructure in Amazon Web Services and Google Cloud Platform using Terraform.",
+    "Created different services in AWS such as Custom Beanstalk Environment, Lambda Function, EC2 instance, VPC, and other services as per the requirements.",
+    "Ran terraform codes in the CICD pipeline and manage state files in Bucket / Cloud Storage and modify the infrastructure as per the requirements. Terraform for AWS and GCP, Infrastructure creation.",
+    "Used Ubuntu as my primary operating system, to work and surf through terminals. Installation of packages, updates, and removal to optimize essential Linux performance.",
+    "Knowledge about Kubernetes Cluster Architecture and its implementation with Service, Deployment, Scheduling with Logging, and Monitoring."
+  ]
+  
