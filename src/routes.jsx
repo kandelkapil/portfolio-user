@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/ErrorPage";
+import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     {
         path: "/resume",
         element: <Resume />,
+    },
+    {
+        path: '/contact',
+        element: <Contact />
     },
     {
         path: '*',
