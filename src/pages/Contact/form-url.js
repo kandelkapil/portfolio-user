@@ -1,0 +1,1 @@
+export const GOOGLE_FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdplO5eQyFP38M7gsd4u6bzpfx1S4hl60ZTNWtgcIOGHSiRbw/formResponse'
