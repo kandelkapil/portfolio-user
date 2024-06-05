@@ -1,0 +1,21 @@
+{
+    "projects": [
+      {
+        "title": "Service-On-Call",
+        "description": "The project is designed to facilitate the selection of motorbike service stations. It was built to help users find a suitable service station based on the reviews and ratings of other users. The system was designed to work with the development of mobile applications by means of Python, Django for the Web version, and Django Rest Framework.",
+        "environment": [
+          "Python",
+          "Django",
+          "Django Rest Framework"
+        ]
+      },
+      {
+        "title": "Network Automation",
+        "description": "The project helps to configure different Cisco and MikroTik routers using Python, Django along with netmiko and paramiko.",
+        "environment": [
+          "Network Routing and Switching"
+        ]
+      }
+    ]
+  }
+  
