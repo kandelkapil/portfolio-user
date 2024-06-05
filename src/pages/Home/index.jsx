@@ -1,47 +1,151 @@
-import React from 'react'
+import React, { useEffect,useRef,useState } from 'react'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { Link } from 'react-router-dom';
+const texts = ['DevOps • Development • Backend', 'AWS • Kubernetes • GCP'];
 
 const Home = () => {
+    const containerRef = useRef('');
+    const [index, setIndex] = useState(0);
+    const [currentText, setCurrentText] = useState('');
+    const [letterIndex, setLetterIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    useGSAP(
+        () => {
+            gsap.from('#header', {
+                duration: 2,
+                x: '-100%',
+                ease: 'easeinout'
+            })
+
+            gsap.from('#projects_list', {
+                duration: 2,
+                delay: 1,
+                y: '100%',
+                ease: 'easeinout'
+            })
+
+            gsap.from('#animate_title', {
+                duration: 2,
+                delay: 2,
+                opacity: 0,
+                ease: 'easeinout'
+            })
+
+            gsap.from('#animate_logo', {
+                duration: 2,
+                delay: 0.6,
+                opacity: 0,
+                x: '100%',
+
+                ease: "back.out(1.7)"
+            })
+        },
+        { scope: containerRef }
+    );
+
+    const scrollTopHandler = () => {
+        if (document.documentElement.scrollTop > 500) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    const scrollHandler = () => {
+        const buttonTop = document.getElementById('btntotop');
+        if (document.documentElement.scrollTop > 500) {
+            buttonTop.style.display = "block";
+        }
+        else {
+            buttonTop.style.display = "none";
+        }
+    }
+
+    useEffect(() => {
+        const text = texts?.[index];
+        const textLength = text?.length;
+    
+        let timeoutId;
+    
+        const autoWrite = () => {
+          if (!isDeleting) {
+            setLetterIndex((prevIndex) => prevIndex + 1);
+          } else {
+            setLetterIndex((prevIndex) => prevIndex - 1);
+          }
+    
+          const nextText = isDeleting
+            ? text.slice(0, letterIndex)
+            : text.slice(0, letterIndex + 1);
+    
+          setCurrentText(nextText);
+    
+          if (isDeleting && letterIndex === 0) {
+            setIsDeleting(false);
+            setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          }
+    
+          if ((!isDeleting && letterIndex === textLength) || (isDeleting && letterIndex === 0)) {
+            setIsDeleting(!isDeleting);
+          }
+        };
+    
+        timeoutId = setTimeout(autoWrite, 100);
+    
+        return () => clearTimeout(timeoutId);
+      }, [index, letterIndex, isDeleting]);
+
     return (
-        <><body>
-            <button id="btntotop" onScroll={() => {
-                if (document.documentElement.scrollTop > 500) {
-                    btnToTop.style.display = "block";
-                } else {
-                    btnToTop.style.display = "none";
-                }
-            }}>
-                put an svg upward arrow here
-            </button>
-            <nav className="navbar navbar-expand-lg  sticky-top navbar-hidden">
+        <body onScroll={scrollHandler} ref={containerRef}>
+            <span id="btntotop" style={{ display: 'block' }} onClick={scrollTopHandler}>
+                <i style={{ cursor: 'pointer' }} className=" bi bi-arrow-up"></i>
+            </span>
+            <nav className="navbar navbar-expand-lg  sticky-top">
                 <div className="container">
-                    <a className="navbar-brand" href="#">
-                        <h2 id="animate_logo" className="fs-3 fw-bold">
-                            PUT YOUR LOGO HERE
-                        </h2>
-                    </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <Link className="navbar-brand" to="/">
+                    <img src="/logo.webp" alt="upward" width="40px" style={{ cursor: 'pointer' }} />       
+                    </Link>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-
                     <div className="collapse navbar-collapse text-center" id="navbarNav">
-                        <ul className="navbar-nav ms-auto my-3">
+                        <ul className="navbar-nav  ms-auto sticky-top my-3">
                             <li className="nav-item mx-2">
-                                <a className="nav-link active" aria-current="page" style={{ cursor: 'pointer', fontWeight: 500, color: '#6c63ff' }} href="#">
-                                    <i className="fa-solid fa-right-long fa-fade mx-2"></i>Projects</a>
+                                <Link className="nav-link active" to="/">
+                                    Projects
+                                </Link>
+                            </li>
+                            <li className="nav-item ">
+                                <Link className="nav-link " to="/resume">
+                                    Resume
+                                </Link>
                             </li>
                             <li className="nav-item mx-2">
-                                <Link className="nav-link" to="/resume">Resume</Link>
+                                <Link className="nav-link" to="/about" style={{ fontWweight: 500, color: '#6c63ff' }}>
+                                    <i className="fa-solid fa-right-long fa-fade mx-2"></i> About me
+                                </Link>
                             </li>
-                            <li className="nav-item mx-2">
-                                <Link className="nav-link" to="/about">About me</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact" style={{ fontWweight: 500, color: '#6c63ff' }}>
+                                    Contact
+                                </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            &gt;
             <header id="header">
                 <div className="container pt-4">
                     <div className="Subtitle">
@@ -53,8 +157,8 @@ const Home = () => {
                         <h1 className="lh-base">
                             I'm
                             <span>
-                                <a href="https://www.linkedin.com/in/manishux/" target="_blank" style="text-decoration: none;cursor: pointer;">
-                                    {'Manip Poudel,</>'}
+                                <a href="https://www.linkedin.com/in/manishux/" target="_blank" style={{ textDecoration: 'none', cursor: 'pointer' }}>
+                                    {' '} Manip Poudel, {' '}
                                 </a>
                             </span>
                             a DevOps Engineer <br />currently deploying
@@ -62,7 +166,9 @@ const Home = () => {
                         </h1>
                     </div>
                     <div className="nickname pt-0">
-                        <p id="main-text"></p>
+                        <p id="main-text" style={{minHeight:'40px'}}>
+                            {currentText}
+                        </p>
                     </div>
                 </div>
             </header><hr className="mt-2 opacity-0" />
@@ -74,8 +180,6 @@ const Home = () => {
                 </h5>
             </div>
 
-
-            &gt;
             <main id="projects_list">
                 <div className="container pt-3">
                     <div className="row row-cols-lg-2 row-cols-sm-1 row-cols-md-1 row-gap-3">
@@ -162,7 +266,7 @@ const Home = () => {
                     </a>
                 </div>
             </footer>
-        </body></>
+        </body>
     )
 }
 
