@@ -3,6 +3,10 @@
   cursor: url(Fixit/Ellipse\ 324.png), auto;  
 }
 
+a {
+  cursor: pointer;
+}
+
 
 .a11p{
   font-size: 18px;
@@ -101,13 +105,7 @@ body[data-aos-duration='4000'] [data-aos],
   position: fixed;
   right: 10px;
   bottom: 10px;
-  width: 4cap;
-  height: 40px;
-  background: #6c63ff;
-  outline: none;
   cursor: pointer;
-  border-radius: 50%;
-  border-color: #6c63ff;
 }
 
 #btntotop:active {
