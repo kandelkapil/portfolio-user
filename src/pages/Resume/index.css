@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    color: #333;
+}
+p {
+    margin: 10px 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+ul li:before {
+    content: "• ";
+    color: #0073e6;
+}
+.contact {
+    margin-bottom: 20px;
+}
+.contact a {
+    color: #0073e6;
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
