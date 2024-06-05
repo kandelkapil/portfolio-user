@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { ABOUT_ME } from './About'
 
 const About = () => {
 
@@ -28,17 +30,15 @@ const About = () => {
         <body id="page-about">
 
             <button id="btntotop" onClick={handleTopScroll}>
-                <img src="Fixit/btn_back.png" alt="upward" width="40px" style={{ cursor: 'pointer' }} />
+                <img src="logo.webp" alt="upward" width="40px" style={{ cursor: 'pointer' }} />
             </button>
 
 
             <nav className="navbar navbar-expand-lg sticky-top">
                 <div className="container">
-                    <a className="navbar-brand" href="index.html">
-                        <h2 id="animate_logo" className="fs-3 fw-bold">
-                            PUT YOUR LOGO HERE
-                        </h2>
-                    </a>
+                    <Link className="navbar-brand" to="/">
+                    <img src="/logo.webp" alt="upward" width="40px" style={{ cursor: 'pointer' }} />       
+                      </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -46,14 +46,24 @@ const About = () => {
                     <div className="collapse navbar-collapse text-center" id="navbarNav">
                         <ul className="navbar-nav  ms-auto sticky-top my-3">
                             <li className="nav-item mx-2">
-                                <a className="nav-link" aria-current="page" href="index.html" style={{ cursor: 'pointer' }}>Projects</a>
+                                <Link className="nav-link" to="/">
+                                    Projects
+                                </Link>
                             </li>
                             <li className="nav-item mx-2">
-                                <a className="nav-link" href="resume.html" style={{ cursor: 'pointer' }}>Resume</a>
+                                <Link className="nav-link" to="/resume">
+                                    Resume
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="Aboutme.html" style={{ cursor: 'pointer',fontWweight: 500, color: '#6c63ff' }}>
-                                    <i className="fa-solid fa-right-long fa-fade mx-2"></i>About me</a>
+                                <Link className="nav-link active" to="/about" style={{ fontWweight: 500, color: '#6c63ff' }}>
+                                    <i className="fa-solid fa-right-long fa-fade mx-2"></i> About me
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact" style={{ fontWweight: 500, color: '#6c63ff' }}>
+                                    Contact
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -64,22 +74,12 @@ const About = () => {
             <div className="my-image container pt-5">
                 <div className="row row-cols-lg-2 row-cols-sm-1 row-cols-md-1 row-gap-lg-4 row-gap-md-3 row-gap-sm-3">
                     <div className="col-sm-1 h-100">
-                        <img src="put your image" alt="myimage" className="w-100 h-75 object-fit-cover" />
+                        <img src="/manip.JPG" alt="myimage" className="w-100 h-75 object-fit-cover" />
                     </div>
 
                     <div className="col-sm-1">
-                        <h2 className="title-aboutme pt-3" style={{ color: '#161515'}}>Hi there!</h2>
-                        <p className="description-aboutme pt-2 lh-4">
-                            Write your description and life experiences here.
-                        </p>
-                        <p className="description-aboutme-2 pt-2 lh-4">
-                            This is for paragraph change and making the para fit with your vertical image
-                            beside this.
-                        </p>
-                        <p className="description-aboutme-3 pt-2 lh-4">
-                            If you have any questions, please don't hesitate to contact me at
-                            <span>manip.poudel@gmail.com</span>
-                        </p>
+                        <h2 className="title-aboutme pt-3" style={{ color: '#161515' }}>Hi there!</h2>
+                        <div  dangerouslySetInnerHTML={{ __html: ABOUT_ME }} />
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@ const About = () => {
                 </div>
                 <div className="container mb-3 text-center">
                     <a href="#">
-                        <i className="fa-solid fa-envelope fa-fade  fa-lg" style= {{ cursor: 'pointer', color: 'black' }}></i>
+                        <i className="fa-solid fa-envelope fa-fade  fa-lg" style={{ cursor: 'pointer', color: 'black' }}></i>
                     </a>
 
 
