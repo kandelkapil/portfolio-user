@@ -2,6 +2,8 @@ import React, { useEffect,useRef,useState } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Link } from 'react-router-dom';
+import DescriptionPage from '../Description';
+import PROJECTS from './projects.json'
 const texts = ['DevOps • Development • Backend', 'AWS • Kubernetes • GCP'];
 
 const Home = () => {
@@ -10,6 +12,7 @@ const Home = () => {
     const [currentText, setCurrentText] = useState('');
     const [letterIndex, setLetterIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
+    const [description, setDescription] = useState(null);
 
     useGSAP(
         () => {
@@ -183,55 +186,17 @@ const Home = () => {
             <main id="projects_list">
                 <div className="container pt-3">
                     <div className="row row-cols-lg-2 row-cols-sm-1 row-cols-md-1 row-gap-3">
-
-                        <div className="col-sm-12">
-                            <a href="VisaMate.html" target="_self" id="visamates" className="project-link-2">
-                                <img src="manip.JPG" alt="thumbnail" className=" img1 img-fluid" style={{ cursor: 'pointer' }} />
-                                <h5 className="title-2" style={{ cursor: 'pointer' }}>Amazon Web Service</h5>
+                        {PROJECTS.projects.map((project) => (
+                            <div className="col-sm-12"
+                                onClick={() => setDescription(project)}
+                            >
+                                <img src={project.image} alt="thumbnail" className=" img1 img-fluid" style={{ cursor: 'pointer' }} />
+                                <h5 className="title-2" style={{ cursor: 'pointer' }}>{project.title}</h5>
                                 <p className="description-2">
-                                    Making deployement easy for Amazon company and chief deployment officer
-                                    for Amazon Company.
+                                    {project.description}
                                 </p>
-                            </a>
-                        </div>
-
-                        <div className="col-sm-12">
-                            <a href="breath.html" target="_self" className="project-link-2">
-                                <img src="manip.JPG" alt="thumbnail" className=" img4 img-fluid" style={{ cursor: 'pointer' }} />
-                                <h5 className="title-2" style={{ cursor: 'pointer' }}>Google</h5>
-                                <p className="description-2">
-                                    Making deployement easy for Amazon company and chief deployment officer
-                                    for Amazon Company.
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="container mt-lg-2 mt-0 pt-4 px-0">
-                        <div className="row row-cols-lg-2 row-cols-sm-1 row-cols-md-1 row-gap-3">
-                            <div className="col-sm-12">
-                                <a href="Intern.html" target="_self" className="project-link-3">
-                                    <img src="manip.JPG" alt="thumbnail" className="img-thrd img-fluid" style={{ cursor: 'pointer' }} />
-                                    <h5 className="title-3" style={{ cursor: 'pointer' }}>Wesionary Team</h5>
-                                    <p className="description-3">
-                                        Making deployement easy for Subba sir and chief deployment officer
-                                        for Wesionary Team.
-                                    </p>
-                                </a>
                             </div>
-
-                            <div className="col-sm-12">
-                                <a href="case-1.html" target="_self" className="project-link-1">
-                                    <img src="manip.JPG" alt="thumbnail" className="img-scnd img-fluid" style={{ cursor: 'pointer' }} />
-                                    <h5 className="title-1" style={{ cursor: 'pointer' }}>NAXA</h5>
-                                    <p className="description-1">
-                                        Making naxa for all the companies around the world and
-                                        earning reputation in the industry.
-                                    </p>
-                                </a>
-                            </div>
-
-                        </div>
+                        ))}
                     </div>
                 </div>
             </main>
@@ -266,6 +231,12 @@ const Home = () => {
                     </a>
                 </div>
             </footer>
+
+            {description && <DescriptionPage
+                description={description}
+                handleClose={() => setDescription(null)}
+            />
+            }
         </body>
     )
 }

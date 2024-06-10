@@ -1,0 +1,39 @@
+{
+    "projects":[
+        {
+        "title":"Amazon Web Service",
+        "description":"Making deployement easy for Amazon company and chief deployment officer for Amazon Company.",
+        "image":"manip.JPG",
+        "role": [
+            "massage",
+            "jhadu",
+            "pocha"
+        ],
+        "acheivements": [
+            {
+                "titlle": "Dev Ops",
+                "description": "I did nuru massage here",
+                "image": "manip.JPG"
+            }
+        ]
+    },
+    {
+        "title":"Google",
+        "description":" Making deployement easy for Amazon company and chief deployment officer for Amazon Company.",
+        "image":"manip.JPG"
+    },
+    {
+        "title":"Wesionary Team",
+        "description":" Making deployement easy for Subba sir and chief deployment officer for Wesionary Team.",
+        "image":"manip.JPG"
+    },
+    {
+        "title":"NAXA",
+        "description":"Making naxa for all the companies around the world and earning reputation in the industry.",
+        "image":"manip.JPG"
+    }  
+
+
+    
+]
+}
